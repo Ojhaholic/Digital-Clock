@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        .cont {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            width: 100%;
+        }
+
+        .clock {
+            text-align: center;
+            padding: 1rem;
+            height: 40px;
+            width: 200px;
+            color: #000000;
+            font-size: 30px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121; color: #ffffff;">
+    <div class="cont">
+        <div class="text">
+            <h3>The current time is</h3>
+        </div>
+        <div class="clock"></div>
+    </div>
+</body>
+
+
+<script>
+
+    setInterval(() => {
+        const clock = document.querySelector(".clock")
+        const date = new Date().toLocaleTimeString()
+        clock.innerHTML = date
+    }, 10)
+
+</script>
+
+</html>
